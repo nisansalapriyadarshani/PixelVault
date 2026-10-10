@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelVault | Interactive Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <!-- Website Logo -->
+
+        <a href="#home" class="logo">
+
+            <span class="logo-icon">📸</span>
+
+            <span class="logo-content">
+
+                <span class="logo-text">
+                    Pixel<span>Vault.</span>
+                </span>
+
+                <span class="logo-description">
+                    Every Pixel Tells a Story
+                </span>
+
+            </span>
+
+        </a>
+
+        <!-- Navigation -->
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="#home" class="nav-link active">
+                Home
+            </a>
+
+            <a href="#gallery" class="nav-link">
+                Gallery
+            </a>
+
+            <a href="#about" class="nav-link">
+                About
+            </a>
+
+        </nav>
+
+        <!-- Theme Toggle -->
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme">
+            ☀️
+        </button>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                WELCOME TO PIXELVAULT
+            </p>
+
+            <h1>
+                Explore Beautiful
+                <span>Moments.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover breathtaking photography,
+                explore amazing destinations,
+                and save your favorite moments.
+            </p>
+
+            <a href="#gallery" class="explore-btn">
+                Explore Gallery →
+            </a>
+
+        </div>
+
+    </section>
+
+    
+    <!-- Gallery Section -->
+
+    <section class="gallery-section" id="gallery">
+
+        <!-- Gallery Heading -->
+
+        <div class="section-heading reveal">
+
+            <p class="section-label">
+                OUR COLLECTION
+            </p>
+
+            <h2>Discover Our Gallery</h2>
+
+            <p>
+                Explore stunning photography
+                from around the world.
+            </p>
+
+        </div>
+
+
+        <!-- Search Bar -->
+
+        <div class="search-container reveal">
+
+            <span aria-hidden="true">🔍</span>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search nature, travel, animals..."
+                aria-label="Search gallery photos"
+            >
+
+        </div>
+
+
+        <!-- Category Filters -->
+
+        <div class="filter-buttons reveal">
+
+            <button class="filter-btn active" data-filter="all">
+                All Photos
+            </button>
+
+            <button class="filter-btn" data-filter="nature">
+                🌿 Nature
+            </button>
+
+            <button class="filter-btn" data-filter="travel">
+                ✈️ Travel
+            </button>
+
+            <button class="filter-btn" data-filter="animals">
+                🐾 Animals
+            </button>
+
+            <button class="filter-btn" data-filter="favorites">
+                ❤️ Favorites
+            </button>
+
+        </div>
+
+
+        <!-- Image Counter -->
+
+        <div class="gallery-info">
+
+            <p id="imageCounter" aria-live="polite">
+                Showing 12 photos
+            </p>
+
+        </div>
+
+
+        <!-- Image Gallery -->
+
+        <div class="gallery-container">
+
+            <!-- Nature Images -->
+
+            <div class="gallery-item reveal"
+                 data-category="nature"
+                 data-title="Golden Sunset">
+
+                <img
+                    src="images/nature1.jpeg"
+                    alt="Golden Sunset"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="nature"
+                 data-title="Mountain Paradise">
+
+                <img
+                    src="images/nature2.jpeg"
+                    alt="Mountain Paradise"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="nature"
+                 data-title="Beautiful Nature">
+
+                <img
+                    src="images/nature3.jpg"
+                    alt="Beautiful Nature"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="nature"
+                 data-title="Green Landscape">
+
+                <img
+                    src="images/nature4.png"
+                    alt="Green Landscape"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <!-- Travel Images -->
+
+            <div class="gallery-item reveal"
+                 data-category="travel"
+                 data-title="Island Adventure">
+
+                <img
+                    src="images/travel1.jpeg"
+                    alt="Island Adventure"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="travel"
+                 data-title="Tropical Paradise">
+
+                <img
+                    src="images/travel2.jpeg"
+                    alt="Tropical Paradise"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="travel"
+                 data-title="Travel Memories">
+
+                <img
+                    src="images/travel3.jpeg"
+                    alt="Travel Memories"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="travel"
+                 data-title="Explore The World">
+
+                <img
+                    src="images/travel4.webp"
+                    alt="Explore The World"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <!-- Animal Images -->
+
+            <div class="gallery-item reveal"
+                 data-category="animals"
+                 data-title="Wildlife Beauty">
+
+                <img
+                    src="images/animal1.jpeg"
+                    alt="Wildlife Beauty"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="animals"
+                 data-title="Cute Animals">
+
+                <img
+                    src="images/animal2.jpeg"
+                    alt="Cute Animals"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="animals"
+                 data-title="Animal Kingdom">
+
+                <img
+                    src="images/animal3.webp"
+                    alt="Animal Kingdom"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="gallery-item reveal"
+                 data-category="animals"
+                 data-title="Amazing Wildlife">
+
+                <img
+                    src="images/animal4.webp"
+                    alt="Amazing Wildlife"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Empty Search Message -->
+
+        <p id="emptyMessage" class="empty-message" hidden>
+            No photos found. Try another search.
+        </p>
+
+    </section>
+
+
+    <!-- About Section -->
+
+    <section class="about-section" id="about">
+
+        <div class="reveal">
+
+            <p class="section-label">
+                ABOUT US
+            </p>
+
+            <h2>About PixelVault</h2>
+
+            <p>
+                PixelVault is an interactive image gallery
+                created using HTML, CSS, and JavaScript.
+
+                Explore beautiful images, discover
+                categories, and save your favorite
+                photographs.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Lightbox -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image preview"
+        aria-hidden="true"
+    >
+
+        <!-- Close Button -->
+
+        <button
+            class="close-btn"
+            id="closeLightbox"
+            aria-label="Close image">
+            ×
+        </button>
+
+
+        <!-- Lightbox Content -->
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt=""
+            >
+
+            <!-- Image Details -->
+
+            <div class="lightbox-details">
+
+                <div>
+
+                    <h3 id="lightboxTitle"></h3>
+
+                    <p id="lightboxCategory"></p>
+
+                </div>
+
+                <p id="lightboxCounter"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Previous Button -->
+
+        <button
+            class="prev-btn"
+            id="prevBtn"
+            aria-label="Previous image">
+            ❮
+        </button>
+
+
+        <!-- Next Button -->
+
+        <button
+            class="next-btn"
+            id="nextBtn"
+            aria-label="Next image">
+            ❯
+        </button>
+
+
+        <!-- Lightbox Action Buttons -->
+
+        <div class="lightbox-actions">
+
+            <!-- Favorite Button -->
+
+            <button
+                id="favoriteBtn"
+                aria-label="Toggle favorite">
+                ♡
+            </button>
+
+            <!-- Download Button -->
+
+            <button
+                id="downloadBtn"
+                aria-label="Download image">
+                ⬇
+            </button>
+
+            <!-- Fullscreen Button -->
+
+            <button
+                id="fullscreenBtn"
+                aria-label="Toggle fullscreen">
+                ⛶
+            </button>
+
+            <!-- Slideshow Button -->
+
+            <button
+                id="slideshowBtn"
+                aria-label="Start slideshow">
+                ▶
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Back to Top Button -->
+
+    <button
+        id="backToTop"
+        aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 PixelVault.
+            Developed for CodeAlpha Internship.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
